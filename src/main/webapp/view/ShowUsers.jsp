@@ -11,12 +11,29 @@
 <style>
 
 .myTable1,table table-hover{
-margin : 4% 4% 4% 4%;
+margin : 3% 4% 4% 4%;
+}
+body{
+	background-image : url("https://i.ibb.co/tQwzj2M/login-background.jpg");
+	background-repeat : no-repeat; 	
+	background-size : cover;
+}	
+table, tr {
+    border: 1px inset black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td:hover {
+    border: 1px solid red;
 }
 </style>
 </head>
 
 <body>
+<nav class="navbar navbar-dark bg-dark">
+ <a class="navbar-brand" href="#">E-Health Care</a>
+</nav>
 <div class="myTable1">
 <table class="table table-hover">
   <thead style="background-color :black; color:white;">

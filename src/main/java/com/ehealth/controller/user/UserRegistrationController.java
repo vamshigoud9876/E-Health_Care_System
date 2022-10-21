@@ -23,7 +23,10 @@ public class UserRegistrationController extends HttpServlet {
 		String userAddress = request.getParameter("userAddress");
 		User user = new User(0, username, password, phoneNumber, email, userAddress);
 		if(!uDao.insertUser(user))
-			System.out.print("Not Inserted..");
+		{
+			response.getWriter().print("ekkk");
+			throw new ServletException("Already registered!");
+		}
 		response.sendRedirect("index.jsp");
 	}
 

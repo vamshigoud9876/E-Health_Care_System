@@ -10,13 +10,30 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <style type="text/css">
 .myTable2,table table-hover{
-margin : 4% 4% 1% 4%;
+margin : 2% 4% 4% 4%;
+}
+body{
+	background-image : url("https://i.ibb.co/tQwzj2M/login-background.jpg");
+	background-repeat : no-repeat; 	
+	background-size : cover;
+}	
+table, tr {
+    border: 1px inset black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td:hover {
+    border: 1px solid red;
 }
 </style>
 </head>
 <body>
-
+<nav class="navbar navbar-dark bg-dark">
+ <a class="navbar-brand" href="#">E-Health Care</a>
+</nav>
 <div class="myTable2">
+	
 <table class="table table-hover">
   <thead style="background-color :black; color:white;">
     <tr>

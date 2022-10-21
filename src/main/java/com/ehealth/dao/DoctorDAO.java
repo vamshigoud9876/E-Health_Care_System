@@ -121,17 +121,15 @@ public class DoctorDAO {
 	public int validateDoctor(String username, String password){
 
 		String userName = "";
-		String query = "select userName,doctorId from Doctor where password = "+password;
+		String query = "select doctorId from Doctor where password = ? and username = ?";
 		try {
 			PreparedStatement ps = con.prepareStatement(query);
+			ps.setString(1, password);
+			ps.setString(2, username);
 			ResultSet rs = ps.executeQuery();
 
 			if(rs.next()) {	
-				userName = rs.getString(1);
-				if(username.equals(userName))
-					return rs.getInt(2);
-				else 
-					return -1;
+					return rs.getInt(1);
 			}
 			else 
 				return -1;

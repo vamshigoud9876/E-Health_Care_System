@@ -23,20 +23,19 @@ public class LoginController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		PrintWriter out = response.getWriter();
 		String username = request.getParameter("uname").toString();
 		String password =  request.getParameter("pass").toString();
+		HttpSession session = request.getSession();
+		session.setAttribute("adminUsername", username);
 		ValidateDAO val = new ValidateDAO(username, password);
 		
-        
 		String person = val.validate();
 		if(person!=null){
 			
 			if(person.equals("User")) {
 				
 				UserDAO uDao = new UserDAO();
-				User user = uDao.getUser(username, password);
-				HttpSession session=request.getSession();  
+				User user = uDao.getUser(username, password); 
 		        session.setAttribute("user",user);
 				response.sendRedirect("./view/UserHome.jsp");
 			}
@@ -44,8 +43,7 @@ public class LoginController extends HttpServlet {
 			else if(person.equals("Admin"))
 			{
 				AdminDAO aDao = new AdminDAO();
-				Admin admin = aDao.getAdmin(username, password);
-				HttpSession session=request.getSession();  
+				Admin admin = aDao.getAdmin(username, password); 
 		        session.setAttribute("admin",admin);
 				response.sendRedirect("./view/AdminHome.jsp");
 			}
@@ -53,7 +51,7 @@ public class LoginController extends HttpServlet {
 			else if(person.equals("Doctor")) {
 				DoctorDAO dDao = new DoctorDAO();
 				Doctor doctor = dDao.getDoctor(username, password);
-				HttpSession session=request.getSession();  
+				System.out.print(doctor); 
 		        session.setAttribute("doctor",doctor);
 				response.sendRedirect("./view/DoctorHome.jsp");
 			}

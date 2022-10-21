@@ -14,6 +14,19 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
+body{
+	background-image : url("https://i.ibb.co/tQwzj2M/login-background.jpg");
+	background-repeat : no-repeat; 	
+	background-size : cover;
+}	
+table, tr {
+    border: 1px inset black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td:hover {
+    border: 1px solid red;
+}
 body {
 	font-family: 'Varela Round', sans-serif;
 }

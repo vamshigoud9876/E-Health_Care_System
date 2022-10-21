@@ -12,6 +12,11 @@
 .my-container3{
 	margin-top : 1%;
 }
+body{
+	background-image : url("https://i.ibb.co/tQwzj2M/login-background.jpg");
+	background-repeat : no-repeat; 	
+	background-size : cover;
+}	
 </style>
 </head>
 <body>
@@ -32,5 +37,6 @@
 </div>
 </nav>
 
+<h1 align="center">Welcome <%=session.getAttribute("adminUsername") %></h1>
 </body>
 </html>

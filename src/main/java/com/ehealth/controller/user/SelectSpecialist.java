@@ -23,6 +23,6 @@ public class SelectSpecialist extends HttpServlet {
 		request.setAttribute("doctors", doctors);
 		request.setAttribute("specialist", specialist);
 		RequestDispatcher rq = request.getRequestDispatcher("./view/ShowBookAppointment.jsp");
-		rq.forward(request, response);
+		rq.forward(request, response);	
 	}
 }

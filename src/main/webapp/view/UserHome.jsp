@@ -5,25 +5,58 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style type="text/css">
-
-.my-container3{
-	margin-top : 2%;
-	 
+body{
+background-image : url("../images/login_background.jpg");
+background-repeat : no-repeat; 
+	background-size : cover;
+}
+.grow:hover{
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2);
+transistion-duration : 1.5s;
+}
+.btn{
+	background-color: #00a2b2;
+	color: #fff;
+	border-radius: 30px;
+	padding : 25px;
+	font-weight: 600;
+	font-size: 2em;
+	margin : 20px;
+	border-style : none;
+}
+.btn a{
+	text-decoration : none;
+	color : white;
+}
+.container {
+	width : 100vw;
+	height : 90vh;
+	display : flex;
+	justify-content : center;
+	align-items : center
+}
+.container-wrapper{
+	display : flex;
 }
 </style>
 </head>
 <body>
-<div class="my-container3">
-		<ul class="nav justify-content-center">
-	  <li class="nav-item">
-	    <a class="nav-link" href="ShowBookAppointment.jsp">Book Appointment</a>
-	  </li>
-	  <li class="nav-item">
-	    <a class="nav-link" href="../MyAppointments">My Appointments</a>
-  </li>
-</ul>
+<div class="container">
+	<div class="container-wrapper">
+	<div class="grow">
+	  <button  class="btn">
+	   <a href="ShowBookAppointment.jsp" >Book Appointment</a>
+	  </button>
+	</div>
+	<div class="grow" >
+	  <button  class="btn">
+	   <a href="../MyAppointments" >My Appointments</a>
+	  </button>
+	</div>
+</div>
 </div>
 </body>
 </html>
